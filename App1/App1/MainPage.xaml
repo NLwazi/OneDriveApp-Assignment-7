@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:App1"
+             x:Class="App1.MainPage">
+    
+
+    <StackLayout>
+        <Frame BackgroundColor="Blue" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Onedrive" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Welcome! get to know your OneDrive" FontSize="16" Padding="30,0,30,0"/>
+        <Label Text="Save your files here" FontSize="Title" Padding="30,10,30,10"/>
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Learn more at "/>
+                        <Span Text="https://onedrive.com" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+                        
+            <BoxView Color="Gold" />
+            <Label Text="Pictures"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Column="1"
+                 Color="Gold" />
+            <Label Grid.Column="1"
+               Text="Documents"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            
+                 
+            
+            <Label Grid.Row="1"
+               
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="2"
+                 Grid.ColumnSpan="2"
+                 Color="Gray" />
+            <Label Grid.Row="2"
+               Grid.ColumnSpan="2"
+               Text="Personal Vault"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            
+            <Button Text="Files" />
+            
+         
+
+        </Grid>
+
+        <Grid   BackgroundColor="Blue" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="End">
+                <Image  Source="Home.png"  WidthRequest="30" HeightRequest="30" />
+                <Label Text="Home" TextColor="White"  />
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical"  Grid.Column="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="End">
+                <Image Source="Pages.png" WidthRequest="30" HeightRequest="30"  />
+                <Label Text="Pages" TextColor="White"  />
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical"  Grid.Column="2"  HorizontalOptions="CenterAndExpand" VerticalOptions="End">
+                <Image  Source="Settings.png"  WidthRequest="30" HeightRequest="30" />
+                <Label Text="Settings" TextColor="White" />
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
